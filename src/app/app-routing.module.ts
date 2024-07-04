@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
+  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
   { path: '', component: AppComponent },
   { path: 'user', component: UserComponent },
   

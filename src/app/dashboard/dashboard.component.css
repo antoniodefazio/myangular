@@ -1,0 +1,32 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  width: 23%;
+  text-align: center;
+}
+
+.stat h2 {
+  margin: 0 0 10px;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart {
+  width: 100%;
+}
+
+  
