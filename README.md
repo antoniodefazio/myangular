@@ -28,6 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Simulate production via: 
 
-docker build -t my-angular-app .
-
-docker run -p 4200:4200 my-angular-app
+ng serve --configuration=production
