@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment'; // Import the environment configuration
+
 
 @Component({
   selector: 'app-contact-form',
@@ -9,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactFormComponent implements OnInit {
   contactForm: FormGroup;
-  private apiUrl = 'http://localhost:8081/contact'; 
+  private readonly apiUrl = environment.apiUrl; // Use the API URL from environment variables
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -25,7 +27,7 @@ export class ContactFormComponent implements OnInit {
   onSubmit(): void {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
-      this.http.post(`${this.apiUrl}`, formData).subscribe(
+      this.http.post(`${this.apiUrl}/contact`, formData).subscribe(
         response => {
           console.log('Form submitted successfully', response);
         },
