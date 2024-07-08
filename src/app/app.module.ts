@@ -17,7 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ConditionalInterceptor } from './condauth.interceptor';
-
+import { ReusableTableComponent } from './reusable-table/reusable-table.component';
 
 
 
@@ -28,7 +28,8 @@ import { ConditionalInterceptor } from './condauth.interceptor';
   declarations: [
     AppComponent,
     UserComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ReusableTableComponent,
 
   ],
   imports: [

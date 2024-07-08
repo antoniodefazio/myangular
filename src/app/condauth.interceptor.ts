@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../environments/environment'; 
+import { environment } from '../environments/environment';
 
 export class ConditionalInterceptor implements HttpInterceptor {
 
-  private readonly apiUrl = environment.apiUrl; 
+  private readonly apiUrl = environment.apiUrl;
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // List of URLs to be intercepted

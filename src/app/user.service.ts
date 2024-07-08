@@ -15,5 +15,9 @@ export class UserService {
   getUsers(): Observable<any> {
     return this.http.get<any>(this.apiUrl+'/users');
   }
+
+  getContacts(): Observable<any> {
+    return this.http.get<any>(this.apiUrl+'/contacts');
+  }
 }
 

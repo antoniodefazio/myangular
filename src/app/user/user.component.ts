@@ -10,6 +10,11 @@ export class UserComponent implements OnInit {
 
   users: any[] = [];
 
+  userColumns = [
+    { name: 'Id', type: 'id',  displayType: 'number' },
+    { name: 'Name', type: 'name' , displayType: 'text' }
+  ];
+
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
