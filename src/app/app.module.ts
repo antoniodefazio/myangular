@@ -15,16 +15,21 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ConditionalInterceptor } from './condauth.interceptor';
 
 
 
 
 @NgModule({
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ConditionalInterceptor, multi: true }
+  ],
   declarations: [
-    AppComponent, 
+    AppComponent,
     UserComponent,
     ContactFormComponent
-    
+
   ],
   imports: [
     BrowserModule,
